@@ -8,16 +8,32 @@ import '../../components/app-link'
 import '../../components/app-text-input'
 
 tag forgot-password
+	email = app.forgotPassword.email
+	loading = app.forgotPassword.loading
+	
+	changeEmail = app.forgotPassword.changeEmail
+	resetPassword = app.forgotPassword.resetPassword
+
 	<self[size: 100% d: flex ai: center jc: center]>
 		<[p: 4]>
-			<h3[fw: 700 c: cool8 ta: center mb: 2]> "Forgot password"
-			<h6[c: cool5 ta: center mb: 16]> "Enter your email and we'll send you a link to change your password."
+			<h3[fw: 700 c: $c9 ta: center mb: 2]> "Forgot password"
+			<h6[c: $c6 ta: center mb: 16]> "Enter your email and we'll send you a link to change your password."
 			<[d: grid gap: 8]>
 				<[d: grid gap: 4]>
-					<app-form-field label='Email'>
-						<app-text-input value="red">
-							<app-icon name="envelope">
-					<app-button.primary>
+					<app-form-field
+						label='Email'
+						error=email.error.message
+					>
+						<app-text-input
+							icon='envelope'
+							value=email.value
+							error=!!email.error.code
+							@change=changeEmail(e.detail)
+						>
+					<app-button.primary
+						loading=loading.resetPassword
+						@click=resetPassword
+					>
 						"Reset password"
 				<app-divider> "or"
 				<app-button.secondary.outlined
@@ -44,8 +60,8 @@ tag forgot-password
 			right: 0 
 			bottom: 0
 			
-			background: blue0 
-			color: gray5 
+			background: $custom-bg 
+			color: $c6 
 			font-size: .875rem 
 			font-weight: 700 
 			

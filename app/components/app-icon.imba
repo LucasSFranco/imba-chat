@@ -7,7 +7,7 @@ const icons = {
 
 tag app-icon
 
-	prop name\string
+	prop name
 	
 	<self.icon>
 		<svg src=icons[name]>

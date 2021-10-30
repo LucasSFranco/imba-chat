@@ -1,7 +1,7 @@
 tag app-form-field
 
-	label\string
-	error\string
+	prop label
+	prop error
 
 	<self.form-field
 		.error=error
@@ -18,7 +18,7 @@ tag app-form-field
 		gap: .25rem
 
 		.label
-			color: gray4
+			color: $c5
 			font-size: .625rem
 			font-weight: 700
 			text-transform: uppercase

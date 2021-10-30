@@ -1,4 +1,5 @@
 {
+    "workbench.colorTheme": "Imba Dark",
     "[imba]": {
         "editor.insertSpaces": false,
         "editor.tabSize": 4,

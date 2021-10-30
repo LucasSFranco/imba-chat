@@ -1,33 +1,38 @@
 tag app-text-input
 
-	value\string
-	placeholder\string
+	prop value
+	prop placeholder
+	prop type
+	prop icon
+	prop error
 
-	def alterValue text
-		self.value = text
+	def changeValue text
+		value = text
 
-		emit('alter', self.value)
+		emit('change', self.value)
 
-	<self.text-input>
-		<input.input
-			[pr: 2.5rem]
+	<self.text-input .error=error>
+		<input
+			[pr: 2.5rem]=icon
 			placeholder=placeholder
 			value=value
-			@input=alterValue(e.target.value)
+			type=type
+			@input=changeValue(e.target.value)
+			@change.stop
 		>
-		<slot>
+		<app-icon name=icon>
 		
 	css &
 		display: flex
 		align-items: center
 
-		background: cool0
-		border: 1px solid cool2
+		background: $c1
+		border: 1px solid $c3
 		border-radius: .125rem
-		color: gray5
+		color: $c6
 		position: relative
 		
-		.input
+		input
 			border: none
 			background: none
 			outline: none
@@ -39,13 +44,18 @@ tag app-text-input
 			font-family: inherit
 			font-size: .875rem
 
-		>>> .icon
+		.icon
+			pointer-events: none
+
 			position: absolute
 			right: .75rem
 
 		@focus-within
 			border-color: blue5
-			color: gray6
+			color: $c7
+
+		&.error
+			border-color: red5
 
 			
 

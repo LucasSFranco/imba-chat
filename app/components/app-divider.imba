@@ -6,7 +6,7 @@ tag app-divider
 	css &
 		height: 1px
 		
-		background: gray2
+		background: $c3
 		position: relative
 
 		span
@@ -18,8 +18,8 @@ tag app-divider
 			x: -50%
 			y: -50%
 
-			background: white
-			color: gray4
+			background: $c0
+			color: $c5
 			padding: 0 .25rem
 
 
