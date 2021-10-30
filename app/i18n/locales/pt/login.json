@@ -1,3 +1,11 @@
 {
-  "4kqTQtBIj": "Conecte-se"
+  "title": "Conecte-se",
+  "subtitle": "Bem-vindo de volta, estamos felizes em vê-lo novamente!",
+  "google-auth-btn": "Conecte-se com o Google",
+  "email": "E-mail",
+  "password": "Senha",
+  "to-forgot-password": "Esqueceu a senha?",
+  "log-in-btn": "Conectar-se",
+  "no-account": "Não tem uma conta?",
+  "to-register": "Registre-se!"
 }

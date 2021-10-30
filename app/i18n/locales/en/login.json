@@ -1,3 +1,11 @@
 {
-  "4kqTQtBIj": "Log in"
+  "title": "Log in",
+  "subtitle": "Welcome back, we are glad to see you again!",
+  "google-auth-btn": "Log in with Google",
+  "email": "Email",
+  "password": "Password",
+  "to-forgot-password": "Forgot password?",
+  "log-in-btn": "Log in",
+  "no-account": "Don't have an account?",
+  "to-register": "Register!"
 }

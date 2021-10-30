@@ -1,0 +1,10 @@
+{
+  "title": "Create an account",
+  "subtitle": "Register to be able to chat with your friends.",
+  "name": "Name",
+  "email": "Email",
+  "password": "Password",
+  "confirm-password": "Confirm Password",
+  "register-btn": "Register",
+  "to-login": "Already have an account?"
+}

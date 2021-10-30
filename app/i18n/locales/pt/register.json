@@ -1,0 +1,10 @@
+{
+  "title": "Criar uma conta",
+  "subtitle": "Registre-se para poder bater um papo com seus amigos.",
+  "name": "Nome",
+  "email": "E-mail",
+  "password": "Senha",
+  "confirm-password": "Confirmar senha",
+  "register-btn": "Registrar-se",
+  "to-login": "Já tem uma conta?"
+}

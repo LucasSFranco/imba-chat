@@ -4,5 +4,10 @@
         "editor.insertSpaces": false,
         "editor.tabSize": 4,
         "editor.autoIndent": "advanced"
-    }
+    },
+    "i18n-ally.localesPaths": [
+        "app/i18n",
+        "app/i18n/locales"
+    ],
+    "i18n-ally.keystyle": "nested"
 }

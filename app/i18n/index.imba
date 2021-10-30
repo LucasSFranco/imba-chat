@@ -1,16 +1,21 @@
 import i18n from 'i18next'
 
-import enLogin from './locales/en/login.json'
-import ptLogin from './locales/pt/login.json'
+import en from './locales/en'
+import pt from './locales/pt'
+
+# Must be refactored to support lazy loading
 
 i18n.init({
-	ns: ['login']
-	fallbackLng: 'en'
+	ns: [
+		'common'
+		'forgot-password'
+		'login'
+		'register'
+	]
+	fallbackLng: 'pt'
 	resources: {
-		en:
-			login: enLogin
-		pt:
-			login: ptLogin
+		en
+		pt
 	}
 })
 
