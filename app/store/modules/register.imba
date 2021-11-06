@@ -4,7 +4,7 @@ import { api } from '../../services/api'
 
 import { Account } from '../../helpers/register/Account'
 
-class Register 
+class Register
 	account = new Account
 
 	loading = {
@@ -17,7 +17,7 @@ class Register
 	def signUp
 		loading = { ...loading, signUp: true }
 
-		try 
+		try
 			# const profile = await api.post('/auth/sign-up')
 			const profile = { name: 'Lucas S Franco' }
 

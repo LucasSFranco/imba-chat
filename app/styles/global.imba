@@ -5,6 +5,8 @@ global css html
 	font-family: 'Nunito', sans-serif
 
 	*
+		user-select: none
+
 		border: 0
 		margin: 0
 		outline: 0

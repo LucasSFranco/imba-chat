@@ -21,7 +21,7 @@ tag app-text-input
 			@change.stop
 		>
 		<app-icon name=icon>
-		
+
 	css &
 		display: flex
 		align-items: center
@@ -31,7 +31,8 @@ tag app-text-input
 		border-radius: .125rem
 		color: $c6
 		position: relative
-		
+		transition: border-color 250ms, color 250ms
+
 		input
 			border: none
 			background: none
@@ -57,5 +58,5 @@ tag app-text-input
 		&.error
 			border-color: red5
 
-			
+
 

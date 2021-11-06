@@ -9,7 +9,7 @@ import '../../components/app-text-input'
 tag login
 	credentials = app.login.credentials
 	loading = app.login.loading
-	
+
 	changeCredentials = app.login.changeCredentials
 	signIn = app.login.signIn
 
@@ -30,6 +30,7 @@ tag login
 						<app-text-input
 							icon='envelope'
 							value=credentials.email.value
+							error=!!credentials.email.error.code
 							@change=changeCredentials(['email', e.detail])
 						>
 					<app-form-field
@@ -40,6 +41,7 @@ tag login
 							icon='lock'
 							type='password'
 							value=credentials.password.value
+							error=!!credentials.password.error.code
 							@change=changeCredentials(['password', e.detail])
 						>
 						<app-link[fs: .75rem]
@@ -51,8 +53,7 @@ tag login
 							@click=signIn
 						>
 							i18n.t('login:log-in-btn')
-						app.global.profile..name
-						<p[c: $c7 fs: .75rem ta: center]> 
+						<p[c: $c7 fs: .75rem ta: center]>
 							i18n.t('login:no-account')
 							<app-link[ml: 1]
 								route-to=routes['register']

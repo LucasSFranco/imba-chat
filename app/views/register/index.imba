@@ -16,49 +16,51 @@ tag register
 	<self[size: 100% d: flex ai: center jc: center]>
 		<[p: 4]>
 			<h3[fw: 700 c: $c9 ta: center mb: 2]> i18n.t('register:title')
-			<h6[c: $c6 ta: center mb: 16]> i18n.t('register:subtitle')
+			<h6[c: $c6 ta: center mb: 16] [o@off: 0] ease> i18n.t('register:subtitle')
 			<[d: grid gap: 8]>
 				<[d: grid gap: 4]>
 					<app-form-field
 						label=i18n.t('register:name')
-						error=account.name.error..message
+						error=account.name.error.message
 					>
 						<app-text-input
 							icon='user'
 							value=account.name.value
-							error=!!account.name.error..code
+							error=!!account.name.error.code
 							@change=changeAccount(['name', e.detail])
 						>
 							<app-icon name="user">
 					<app-form-field
 						label=i18n.t('register:email')
-						error=account.email.error..message
+						error=account.email.error.message
 					>
 						<app-text-input
 							icon='envelope'
 							value=account.email.value
-							error=!!account.email.error..code
+							error=!!account.email.error.code
 							@change=changeAccount(['email', e.detail])
 						>
 							<app-icon name="envelope">
 					<app-form-field
 						label=i18n.t('register:password')
-						error=account.password.error..message
+						error=account.password.error.message
 					>
 						<app-text-input
 							icon='lock'
+							type='password'
 							value=account.password.value
-							error=!!account.password.error..code
+							error=!!account.password.error.code
 							@change=changeAccount(['password', e.detail])
 						>
 							<app-icon name="lock">
 					<app-form-field
 						label=i18n.t('register:confirm-password')
-						error=account.confirmPassword.message
+						error=account.confirmPassword.error.message
 					>
 						<app-text-input
+							type='password'
 							value=account.confirmPassword.value
-							error=!!account.confirmPassword.error..code
+							error=!!account.confirmPassword.error.code
 							@change=changeAccount(['confirmPassword', e.detail])
 						>
 					<[d: grid gap: 3]>

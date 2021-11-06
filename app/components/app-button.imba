@@ -25,10 +25,12 @@ tag app-button < button
 		border-style: solid
 		border-radius: .125rem
 		color: white
+		cursor: pointer
 		font-family: inherit
 		font-size: .875rem
 		font-weight: 700
 		padding: .375rem .75rem
+		transition: color 250ms, background 250ms, border-color 250ms
 
 		.spinner
 			display: flex
@@ -59,9 +61,27 @@ tag app-button < button
 			background: blue5
 			border-color: blue5
 
+			@hover
+				background: blue6
+				border-color: blue6
+
+			@active
+				background: blue7
+				border-color: blue7
+
 		&.outlined
 			font-weight: 500
 
 			&.secondary
 				color: cool4
 				border-color: cool4
+
+				@hover
+					color: cool5
+					border-color: cool5
+
+				@active
+					background: cool0
+					color: cool6
+					border-color: cool6
+
