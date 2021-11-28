@@ -9,7 +9,7 @@ import { routes } from './constants/routes'
 import './views/forgot-password'
 import './views/login'
 import './views/register'
-	
+
 tag client
 	theme = app.global.theme
 
